@@ -10,10 +10,18 @@
 # Import Libraries
 ###################################################
 # Standard Libraries
+import os
+import sys
 import requests
 
-
 # Third-Party Libraries
+
+
+###################################################
+# Set the path to the root directory
+###################################################
+sys.path.append("../../..")
+
 
 ###################################################
 # Scraper Base Class
@@ -26,8 +34,7 @@ class HKJC_Football_Scraper(object):
     ##################################################
     # Class Attributes
     ##################################################
-    graphql_url = "https://info.cld.hkjc.com/graphql/base"
-    graphql_templates_root_dir = "v2/graphql_templates"
+    graphql_url = "https://info.cld.hkjc.com/graphql/base/"
 
     ##################################################
     # Constructor
@@ -68,7 +75,7 @@ class HKJC_Football_Scraper(object):
         response = requests.post(
             url=url,
             headers=headers,
-            data=payload,
+            json=payload,
         )
 
         # check if the response is successful
@@ -77,16 +84,3 @@ class HKJC_Football_Scraper(object):
                 f"Failed to scrape data from the given URL. \n\tStatus Code: {response.status_code} \n\tResponse: {response.text}")
         else:
             return response.json()
-
-    def load_graphql_template_file(self, template_filename: str) -> str:
-        """
-        Load the given GraphQL template.
-
-        @param template_filename: the filename of the template.
-        @return: GraphQL template string.
-        """
-        # write a function for me
-
-        graphql_template_path = f"{self.graphql_templates_root_dir}/{template_filename}"
-        with open(graphql_template_path, "r") as f:
-            return f.read()

@@ -34,15 +34,14 @@ class MatchOddsScraper(HKJC_Football_Scraper):
     ##################################################
     # Core Methods
     ##################################################
-    def get_odds_by_match_ids(self, match_ids: list) -> dict:
+    def get_odds_by_match_ids(self, graphql_template: str, match_ids: list[str]) -> dict:
         """
         Scrape the match odds by the given match IDs.
 
+        @param graphql_template: The GraphQL template to use for the request.
         @param match_ids: A list of matches' IDs to scrape odds for.
         @return: Dictionary containing the odds for the given matches.
         """
-        # Load the GraphQL template
-        graphql_template = self.load_graphql_template_file("query_for_odds_template.txt")
 
         # Variables
         variables = {
@@ -84,3 +83,12 @@ class MatchOddsScraper(HKJC_Football_Scraper):
         )
 
         return data
+
+
+if __name__ == "__main__":
+    import os
+    import sys
+    print(sys.path)
+    print(os.path.exists("v2\\"))
+    f = open("C:\\Users\\Lenovo\\OneDrive\\repo\\sports betting\\hkjc_football\\v2\\graphql_query_templates\\query_for_odds_template.txt", "r")
+    print(os.listdir('C:\\Users\\Lenovo\\OneDrive\\repo\\sports betting\\hkjc_football'))
