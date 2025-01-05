@@ -18,7 +18,7 @@ import requests
 
 
 ###################################################
-# Set the path to the root directory
+# Set the template_filepath to the root directory
 ###################################################
 sys.path.append("../../..")
 
@@ -84,3 +84,14 @@ class HKJC_Football_Scraper(object):
                 f"Failed to scrape data from the given URL. \n\tStatus Code: {response.status_code} \n\tResponse: {response.text}")
         else:
             return response.json()
+
+    @staticmethod
+    def load_graphql_template(template_filepath: str) -> str:
+        """
+        Load the GraphQL template from the given path.
+
+        @param template_filepath: Path to the GraphQL template.
+        @return: GraphQL template as a string.
+        """
+        with open(template_filepath, "r") as file:
+            return file.read()

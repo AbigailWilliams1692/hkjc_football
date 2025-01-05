@@ -1,7 +1,7 @@
 ###################################################
 # Project: HKJC Football
-# Script: scraper/match_results_scraper.py
-# Description: scraper class for match results
+# Script: scraper/team_id_scraper.py
+# Description: scraper class for team IDs
 # Author: AbigailWilliams
 # Date: 2025-01-05
 ###################################################
@@ -10,7 +10,6 @@
 # Import Libraries
 ###################################################
 # Standard Libraries
-import datetime
 import os
 
 # Third-Party Libraries
@@ -26,11 +25,11 @@ root_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
 
 
 ###################################################
-# Match Results Scraper Class
+# Team ID Scraper Class
 ###################################################
-class MatchResultsScraper(HKJC_Football_Scraper):
+class TeamIDScraper(HKJC_Football_Scraper):
     """
-    Match Results Scraper class
+    Team ID Scraper class
     """
 
     ##################################################
@@ -42,26 +41,17 @@ class MatchResultsScraper(HKJC_Football_Scraper):
     ##################################################
     # Core Methods
     ##################################################
-    def get_historical_matches(self, start_date: datetime.date = None, end_date: datetime.date = None, team_id: str = None) -> dict:
+    def get_team_ids(self) -> dict:
         """
-        Scrape the match results by the given match IDs.
+        Scrape the team IDs.
 
-        @param start_date: The start date to search matches for.
-        @param end_date: The end date to search matches for.
-        @param team_id: The team ID to search matches for.
-        @return: Dictionary containing the results for the given matches.
+        @return: Dictionary containing the team IDs.
         """
         # Load the GraphQL template
-        graphql_template = self.load_graphql_template(f"{root_dir}/v2/graphql_query_templates/query_for_historical_matches_template.txt")
+        graphql_template = self.load_graphql_template(f"{root_dir}/v2/graphql_query_templates/query_for_team_ids_template.txt")
 
         # Variables
-        variables = {
-          "startDate": start_date.strftime("%Y-%m-%d") if start_date else None,
-          "endDate": end_date.strftime("%Y-%m-%d") if end_date else None,
-          "startIndex": 1,
-          "endIndex": 20,
-          "teamId": team_id,
-        }
+        variables = {}
 
         # Payload
         payload = {
@@ -80,11 +70,9 @@ class MatchResultsScraper(HKJC_Football_Scraper):
 
 
 if __name__ == "__main__":
-    # Test the MatchResultsScraper
-    match_results_scraper = MatchResultsScraper()
-    match_results = match_results_scraper.get_historical_matches(
-        start_date=datetime.date(2025, 1, 1),
-        end_date=datetime.date(2025, 1, 5),
-        team_id="50000008",
-    )
-    print(match_results)
+    import pandas as pd
+    team_id_scraper = TeamIDScraper()
+    team_ids_data = team_id_scraper.get_team_ids()
+    df = pd.DataFrame(team_ids_data["data"]["teamList"])
+    print(df)
+    print(df.id.dtype)

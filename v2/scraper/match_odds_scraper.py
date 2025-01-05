@@ -1,7 +1,7 @@
 ###################################################
 # Project: HKJC Football
-# Script: scraper/scraper_base.py
-# Description: Base class for the HKJC Football Scraper
+# Script: scraper/match_odds_scraper.py
+# Description: scraper class for match odds
 # Author: AbigailWilliams
 # Date: 2025-01-04
 ###################################################
@@ -10,11 +10,18 @@
 # Import Libraries
 ###################################################
 # Standard Libraries
+import os
 
 # Third-Party Libraries
 
 # Local Libraries
 from v2.scraper.scraper_base import HKJC_Football_Scraper
+
+
+###################################################
+# Add root directory to the sys path
+###################################################
+root_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
 
 
 ###################################################
@@ -34,14 +41,15 @@ class MatchOddsScraper(HKJC_Football_Scraper):
     ##################################################
     # Core Methods
     ##################################################
-    def get_odds_by_match_ids(self, graphql_template: str, match_ids: list[str]) -> dict:
+    def get_odds_by_match_ids(self, match_ids: list[str]) -> dict:
         """
         Scrape the match odds by the given match IDs.
 
-        @param graphql_template: The GraphQL template to use for the request.
         @param match_ids: A list of matches' IDs to scrape odds for.
         @return: Dictionary containing the odds for the given matches.
         """
+        # Load the GraphQL template
+        graphql_template = self.load_graphql_template(f"{root_dir}/v2/graphql_query_templates/query_for_odds_template.txt")
 
         # Variables
         variables = {
@@ -83,12 +91,3 @@ class MatchOddsScraper(HKJC_Football_Scraper):
         )
 
         return data
-
-
-if __name__ == "__main__":
-    import os
-    import sys
-    print(sys.path)
-    print(os.path.exists("v2\\"))
-    f = open("C:\\Users\\Lenovo\\OneDrive\\repo\\sports betting\\hkjc_football\\v2\\graphql_query_templates\\query_for_odds_template.txt", "r")
-    print(os.listdir('C:\\Users\\Lenovo\\OneDrive\\repo\\sports betting\\hkjc_football'))
