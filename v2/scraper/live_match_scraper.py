@@ -1,9 +1,9 @@
 ###################################################
 # Project: HKJC Football
-# Script: scraper/match_odds_scraper.py
+# Script: scraper/live_match_scraper.py
 # Description: scraper class for match odds
 # Author: AbigailWilliams
-# Date: 2025-01-04
+# Date: 2025-01-24
 ###################################################
 
 ###################################################
@@ -11,6 +11,7 @@
 ###################################################
 # Standard Libraries
 import os
+from typing import Optional
 
 # Third-Party Libraries
 
@@ -25,11 +26,11 @@ root_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
 
 
 ###################################################
-# Match Odds Scraper Class
+# Live Match Scraper Class
 ###################################################
-class MatchOddsScraper(HKJC_Football_Scraper):
+class LiveMatchScraper(HKJC_Football_Scraper):
     """
-    Match Odds Scraper class
+    Live Match Scraper class
     """
 
     ##################################################
@@ -39,17 +40,28 @@ class MatchOddsScraper(HKJC_Football_Scraper):
         super().__init__()
 
     ##################################################
-    # Core Methods
+    # Get live and upcoming matches
     ##################################################
-    def get_odds_by_match_ids(self, match_ids: list[str]) -> dict:
+    def get_live_and_upcoming_matches_info(self) -> list[dict]:
         """
-        Scrape the match odds by the given match IDs.
+        Scrape the live and upcoming matches' info.
 
-        @param match_ids: A list of matches' IDs to scrape odds for.
+        @return: List containing the live and upcoming matches.
+        """
+        return self.get_live_matches_info_by_match_ids(match_id_list=None)
+
+    ##################################################
+    # Get live matches info by match IDs
+    ##################################################
+    def get_live_matches_info_by_match_ids(self, match_id_list: Optional[list[str]]) -> list[dict]:
+        """
+        Scrape the info for the live matches by the given match ID list.
+
+        @param match_id_list: A list of matches' IDs to scrape odds for.
         @return: Dictionary containing the odds for the given matches.
         """
         # Load the GraphQL template
-        graphql_template = self.load_graphql_template(f"{root_dir}/v2/graphql_query_templates/query_for_odds_template.txt")
+        graphql_template = self.load_graphql_template(f"{root_dir}/v2/graphql_query_templates/query_for_live_matches_template.txt")
 
         # Variables
         variables = {
@@ -64,7 +76,7 @@ class MatchOddsScraper(HKJC_Football_Scraper):
             "startDate": None,
             "endDate": None,
             "tournIds": None,
-            "matchIds": match_ids,
+            "matchIds": match_id_list,
             "tournId": None,
             "tournProfileId": None,
             "subType": None,
@@ -90,4 +102,4 @@ class MatchOddsScraper(HKJC_Football_Scraper):
             payload=payload,
         )
 
-        return data
+        return data["data"]["matches"]

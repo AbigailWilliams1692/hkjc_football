@@ -67,12 +67,3 @@ class TeamIDScraper(HKJC_Football_Scraper):
         )
 
         return data
-
-
-if __name__ == "__main__":
-    import pandas as pd
-    team_id_scraper = TeamIDScraper()
-    team_ids_data = team_id_scraper.get_team_ids()
-    df = pd.DataFrame(team_ids_data["data"]["teamList"])
-    print(df)
-    print(df.id.dtype)
