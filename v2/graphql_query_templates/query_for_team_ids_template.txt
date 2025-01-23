@@ -1,0 +1,8 @@
+query teamList {
+  teamList {
+    id
+    code
+    name_ch
+    name_en
+  }
+}
