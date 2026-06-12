@@ -1,0 +1,40 @@
+query matchResultDetails($matchId: String, $fbOddsTypes: [FBOddsType]!) {
+  matches: matchResult(matchId: $matchId) {
+    id
+    foPools(fbOddsTypes: $fbOddsTypes, resultOnly: true) {
+      id
+      status
+      oddsType
+      instNo
+      name_ch
+      name_en
+      lines(resultOnly: true) {
+        combinations {
+          str
+          status
+          winOrd
+          selections {
+            selId
+            str
+            name_ch
+            name_en
+          }
+        }
+      }
+    }
+    additionalResults {
+      resSetId
+      results {
+        awayResult
+        homeResult
+        ttlCornerResult
+        mask
+        payoutConfirmed
+        resultConfirmType
+        resultType
+        sequence
+        stageId
+      }
+    }
+  }
+}

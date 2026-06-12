@@ -1,0 +1,2700 @@
+[
+    {
+        "id": "50069886",
+        "frontEndId": "FB0829",
+        "matchDate": "2026-06-13+08:00",
+        "kickOffTime": "2026-06-13T01:00:00.000+08:00",
+        "status": "SECONDHALF",
+        "updateAt": "2026-06-12T05:02:59.080+08:00",
+        "sequence": "0.1781283600.94.Women Swedish Division 1                                                                                                        .0.99.Vittsjo Women                                                                                                                   .001",
+        "esIndicatorEnabled": true,
+        "homeTeam": {
+            "id": "50353896",
+            "name_en": "Vittsjo Women",
+            "name_ch": "\u57df\u65af\u7956\u5973\u8db3"
+        },
+        "awayTeam": {
+            "id": "50353890",
+            "name_en": "Kristianstads Women",
+            "name_ch": "\u57fa\u65af\u8fea\u53f2\u9054\u65af\u5973\u8db3"
+        },
+        "tournament": {
+            "id": "50065711",
+            "frontEndId": "",
+            "nameProfileId": "50651726",
+            "isInteractiveServiceAvailable": false,
+            "code": "SALW",
+            "name_en": "Women Swedish Division 1",
+            "name_ch": "\u5973\u5b50\u745e\u5178\u8d85\u7d1a\u806f\u8cfd"
+        },
+        "isInteractiveServiceAvailable": true,
+        "inplayDelay": true,
+        "venue": null,
+        "tvChannels": [],
+        "liveEvents": [],
+        "featureStartTime": "",
+        "featureMatchSequence": "",
+        "poolInfo": {
+            "normalPools": [
+                "NTS2",
+                "HIL",
+                "TTG",
+                "CHA",
+                "CRS",
+                "HAD",
+                "HDC",
+                "HLA",
+                "CHL",
+                "CHH",
+                "HHA",
+                "CHD",
+                "HLH"
+            ],
+            "inplayPools": [
+                "NTS2",
+                "HIL",
+                "TTG",
+                "CHA",
+                "CRS",
+                "HAD",
+                "HDC",
+                "HLA",
+                "CHL",
+                "CHH",
+                "HHA",
+                "CHD",
+                "HLH"
+            ],
+            "sellingPools": [
+                "NTS2",
+                "HIL",
+                "TTG",
+                "CHA",
+                "CRS",
+                "HAD",
+                "HDC",
+                "HLA",
+                "CHL",
+                "CHH",
+                "HHA",
+                "CHD",
+                "HLH"
+            ],
+            "ntsInfo": [
+                "1:H"
+            ],
+            "entInfo": [],
+            "definedPools": [
+                "SGA20",
+                "SGA13",
+                "NTS2",
+                "HFT",
+                "FHH",
+                "SGA3",
+                "OOE",
+                "CFH",
+                "FCS",
+                "SGA16",
+                "HIL",
+                "SGA11",
+                "SGA19",
+                "SGA12",
+                "CFA",
+                "TTG",
+                "SGA9",
+                "FHA",
+                "FLH",
+                "SGA1",
+                "SGA17",
+                "CHA",
+                "SGA7",
+                "CRS",
+                "FLA",
+                "NTS1",
+                "SGA18",
+                "FTS",
+                "HAD",
+                "HDC",
+                "SGA15",
+                "SGA2",
+                "HLA",
+                "CHL",
+                "CHH",
+                "SGA8",
+                "SGA5",
+                "HHA",
+                "FCH",
+                "SGA4",
+                "FHC",
+                "SGA6",
+                "SGA14",
+                "CHD",
+                "SGA10",
+                "FHL",
+                "HLH"
+            ],
+            "ngsInfo": [],
+            "agsInfo": []
+        },
+        "runningResult": {
+            "homeScore": 1,
+            "awayScore": 0,
+            "corner": 1,
+            "homeCorner": 0,
+            "awayCorner": 1
+        },
+        "runningResultExtra": null,
+        "adminOperation": {
+            "remark": null
+        },
+        "foPools": [
+            {
+                "id": "1714514001",
+                "status": "SELLINGSTARTED",
+                "oddsType": "HAD",
+                "instNo": 0,
+                "inplay": true,
+                "name_ch": "",
+                "name_en": "",
+                "updateAt": "2026-06-13T01:18:15.741+08:00",
+                "expectedSuspendDateTime": "",
+                "lines": [
+                    {
+                        "lineId": "0",
+                        "status": "AVAILABLE",
+                        "condition": "0.0",
+                        "main": true,
+                        "combinations": [
+                            {
+                                "combId": "1",
+                                "str": "H",
+                                "status": "AVAILABLE",
+                                "offerEarlySettlement": "Offer",
+                                "currentOdds": "1.32",
+                                "selections": [
+                                    {
+                                        "selId": "1",
+                                        "str": "H",
+                                        "name_ch": "\u4e3b\u968a\u52dd",
+                                        "name_en": "Home"
+                                    }
+                                ]
+                            },
+                            {
+                                "combId": "2",
+                                "str": "A",
+                                "status": "AVAILABLE",
+                                "offerEarlySettlement": "Offer",
+                                "currentOdds": "8.25",
+                                "selections": [
+                                    {
+                                        "selId": "2",
+                                        "str": "A",
+                                        "name_ch": "\u5ba2\u968a\u52dd",
+                                        "name_en": "Away"
+                                    }
+                                ]
+                            },
+                            {
+                                "combId": "3",
+                                "str": "D",
+                                "status": "AVAILABLE",
+                                "offerEarlySettlement": "Offer",
+                                "currentOdds": "3.65",
+                                "selections": [
+                                    {
+                                        "selId": "3",
+                                        "str": "D",
+                                        "name_ch": "\u548c",
+                                        "name_en": "Draw"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "1714520007",
+                "status": "SELLINGSTARTED",
+                "oddsType": "HHA",
+                "instNo": 0,
+                "inplay": true,
+                "name_ch": "",
+                "name_en": "",
+                "updateAt": "2026-06-13T01:18:31.212+08:00",
+                "expectedSuspendDateTime": "",
+                "lines": [
+                    {
+                        "lineId": "3",
+                        "status": "AVAILABLE",
+                        "condition": "-2.0",
+                        "main": true,
+                        "combinations": [
+                            {
+                                "combId": "1",
+                                "str": "H",
+                                "status": "AVAILABLE",
+                                "offerEarlySettlement": "Offer",
+                                "currentOdds": "17.00",
+                                "selections": [
+                                    {
+                                        "selId": "1",
+                                        "str": "H",
+                                        "name_ch": "\u4e3b\u968a\u52dd",
+                                        "name_en": "Home"
+                                    }
+                                ]
+                            },
+                            {
+                                "combId": "3",
+                                "str": "D",
+                                "status": "AVAILABLE",
+                                "offerEarlySettlement": "Offer",
+                                "currentOdds": "4.05",
+                                "selections": [
+                                    {
+                                        "selId": "3",
+                                        "str": "D",
+                                        "name_ch": "\u548c",
+                                        "name_en": "Draw"
+                                    }
+                                ]
+                            },
+                            {
+                                "combId": "2",
+                                "str": "A",
+                                "status": "AVAILABLE",
+                                "offerEarlySettlement": "Offer",
+                                "currentOdds": "1.18",
+                                "selections": [
+                                    {
+                                        "selId": "2",
+                                        "str": "A",
+                                        "name_ch": "\u5ba2\u968a\u52dd",
+                                        "name_en": "Away"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "lineId": "1",
+                        "status": "SUSPENDED",
+                        "condition": "-1.0",
+                        "main": false,
+                        "combinations": [
+                            {
+                                "combId": "1",
+                                "str": "H",
+                                "status": "AVAILABLE",
+                                "offerEarlySettlement": "Offer",
+                                "currentOdds": "2.90",
+                                "selections": [
+                                    {
+                                        "selId": "1",
+                                        "str": "H",
+                                        "name_ch": "\u4e3b\u968a\u52dd",
+                                        "name_en": "Home"
+                                    }
+                                ]
+                            },
+                            {
+                                "combId": "3",
+                                "str": "D",
+                                "status": "AVAILABLE",
+                                "offerEarlySettlement": "Offer",
+                                "currentOdds": "3.16",
+                                "selections": [
+                                    {
+                                        "selId": "3",
+                                        "str": "D",
+                                        "name_ch": "\u548c",
+                                        "name_en": "Draw"
+                                    }
+                                ]
+                            },
+                            {
+                                "combId": "2",
+                                "str": "A",
+                                "status": "AVAILABLE",
+                                "offerEarlySettlement": "Offer",
+                                "currentOdds": "2.03",
+                                "selections": [
+                                    {
+                                        "selId": "2",
+                                        "str": "A",
+                                        "name_ch": "\u5ba2\u968a\u52dd",
+                                        "name_en": "Away"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "lineId": "2",
+                        "status": "SUSPENDED",
+                        "condition": "+1.0",
+                        "main": false,
+                        "combinations": [
+                            {
+                                "combId": "1",
+                                "str": "H",
+                                "status": "AVAILABLE",
+                                "offerEarlySettlement": "Offer",
+                                "currentOdds": "1.10",
+                                "selections": [
+                                    {
+                                        "selId": "1",
+                                        "str": "H",
+                                        "name_ch": "\u4e3b\u968a\u52dd",
+                                        "name_en": "Home"
+                                    }
+                                ]
+                            },
+                            {
+                                "combId": "3",
+                                "str": "D",
+                                "status": "AVAILABLE",
+                                "offerEarlySettlement": "Offer",
+                                "currentOdds": "6.70",
+                                "selections": [
+                                    {
+                                        "selId": "3",
+                                        "str": "D",
+                                        "name_ch": "\u548c",
+                                        "name_en": "Draw"
+                                    }
+                                ]
+                            },
+                            {
+                                "combId": "2",
+                                "str": "A",
+                                "status": "AVAILABLE",
+                                "offerEarlySettlement": "Offer",
+                                "currentOdds": "10.50",
+                                "selections": [
+                                    {
+                                        "selId": "2",
+                                        "str": "A",
+                                        "name_ch": "\u5ba2\u968a\u52dd",
+                                        "name_en": "Away"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "1714519006",
+                "status": "SELLINGSTARTED",
+                "oddsType": "HDC",
+                "instNo": 0,
+                "inplay": true,
+                "name_ch": "",
+                "name_en": "",
+                "updateAt": "2026-06-13T01:18:16.515+08:00",
+                "expectedSuspendDateTime": "",
+                "lines": [
+                    {
+                        "lineId": "2",
+                        "status": "AVAILABLE",
+                        "condition": "-0.5/-1.0",
+                        "main": true,
+                        "combinations": [
+                            {
+                                "combId": "1",
+                                "str": "H",
+                                "status": "AVAILABLE",
+                                "offerEarlySettlement": "Offer",
+                                "currentOdds": "1.59",
+                                "selections": [
+                                    {
+                                        "selId": "1",
+                                        "str": "H",
+                                        "name_ch": "\u4e3b\u968a\u52dd",
+                                        "name_en": "Home"
+                                    }
+                                ]
+                            },
+                            {
+                                "combId": "2",
+                                "str": "A",
+                                "status": "AVAILABLE",
+                                "offerEarlySettlement": "Offer",
+                                "currentOdds": "2.20",
+                                "selections": [
+                                    {
+                                        "selId": "2",
+                                        "str": "A",
+                                        "name_ch": "\u5ba2\u968a\u52dd",
+                                        "name_en": "Away"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "lineId": "1",
+                        "status": "SUSPENDED",
+                        "condition": "0.0/+0.5",
+                        "main": false,
+                        "combinations": [
+                            {
+                                "combId": "1",
+                                "str": "H",
+                                "status": "AVAILABLE",
+                                "offerEarlySettlement": "Offer",
+                                "currentOdds": "1.23",
+                                "selections": [
+                                    {
+                                        "selId": "1",
+                                        "str": "H",
+                                        "name_ch": "\u4e3b\u968a\u52dd",
+                                        "name_en": "Home"
+                                    }
+                                ]
+                            },
+                            {
+                                "combId": "2",
+                                "str": "A",
+                                "status": "AVAILABLE",
+                                "offerEarlySettlement": "Offer",
+                                "currentOdds": "3.65",
+                                "selections": [
+                                    {
+                                        "selId": "2",
+                                        "str": "A",
+                                        "name_ch": "\u5ba2\u968a\u52dd",
+                                        "name_en": "Away"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "1714516003",
+                "status": "SELLINGSTARTED",
+                "oddsType": "HIL",
+                "instNo": 0,
+                "inplay": true,
+                "name_ch": "",
+                "name_en": "",
+                "updateAt": "2026-06-13T01:18:24.360+08:00",
+                "expectedSuspendDateTime": "",
+                "lines": [
+                    {
+                        "lineId": "1",
+                        "status": "AVAILABLE",
+                        "condition": "2.5",
+                        "main": true,
+                        "combinations": [
+                            {
+                                "combId": "1",
+                                "str": "H",
+                                "status": "AVAILABLE",
+                                "offerEarlySettlement": "Offer",
+                                "currentOdds": "3.25",
+                                "selections": [
+                                    {
+                                        "selId": "1",
+                                        "str": "H",
+                                        "name_ch": "\u5927",
+                                        "name_en": "High"
+                                    }
+                                ]
+                            },
+                            {
+                                "combId": "2",
+                                "str": "L",
+                                "status": "AVAILABLE",
+                                "offerEarlySettlement": "Offer",
+                                "currentOdds": "1.28",
+                                "selections": [
+                                    {
+                                        "selId": "2",
+                                        "str": "L",
+                                        "name_ch": "\u7d30",
+                                        "name_en": "Low"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "lineId": "7",
+                        "status": "AVAILABLE",
+                        "condition": "1.5/2.0",
+                        "main": false,
+                        "combinations": [
+                            {
+                                "combId": "1",
+                                "str": "H",
+                                "status": "AVAILABLE",
+                                "offerEarlySettlement": "Offer",
+                                "currentOdds": "1.72",
+                                "selections": [
+                                    {
+                                        "selId": "1",
+                                        "str": "H",
+                                        "name_ch": "\u5927",
+                                        "name_en": "High"
+                                    }
+                                ]
+                            },
+                            {
+                                "combId": "2",
+                                "str": "L",
+                                "status": "AVAILABLE",
+                                "offerEarlySettlement": "Offer",
+                                "currentOdds": "2.00",
+                                "selections": [
+                                    {
+                                        "selId": "2",
+                                        "str": "L",
+                                        "name_ch": "\u7d30",
+                                        "name_en": "Low"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "lineId": "4",
+                        "status": "AVAILABLE",
+                        "condition": "2.0/2.5",
+                        "main": false,
+                        "combinations": [
+                            {
+                                "combId": "1",
+                                "str": "H",
+                                "status": "AVAILABLE",
+                                "offerEarlySettlement": "Offer",
+                                "currentOdds": "2.88",
+                                "selections": [
+                                    {
+                                        "selId": "1",
+                                        "str": "H",
+                                        "name_ch": "\u5927",
+                                        "name_en": "High"
+                                    }
+                                ]
+                            },
+                            {
+                                "combId": "2",
+                                "str": "L",
+                                "status": "AVAILABLE",
+                                "offerEarlySettlement": "Offer",
+                                "currentOdds": "1.35",
+                                "selections": [
+                                    {
+                                        "selId": "2",
+                                        "str": "L",
+                                        "name_ch": "\u7d30",
+                                        "name_en": "Low"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "lineId": "2",
+                        "status": "SUSPENDED",
+                        "condition": "2.5/3.0",
+                        "main": false,
+                        "combinations": [
+                            {
+                                "combId": "1",
+                                "str": "H",
+                                "status": "AVAILABLE",
+                                "offerEarlySettlement": "Offer",
+                                "currentOdds": "2.25",
+                                "selections": [
+                                    {
+                                        "selId": "1",
+                                        "str": "H",
+                                        "name_ch": "\u5927",
+                                        "name_en": "High"
+                                    }
+                                ]
+                            },
+                            {
+                                "combId": "2",
+                                "str": "L",
+                                "status": "AVAILABLE",
+                                "offerEarlySettlement": "Offer",
+                                "currentOdds": "1.57",
+                                "selections": [
+                                    {
+                                        "selId": "2",
+                                        "str": "L",
+                                        "name_ch": "\u7d30",
+                                        "name_en": "Low"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "lineId": "5",
+                        "status": "SUSPENDED",
+                        "condition": "3.0/3.5",
+                        "main": false,
+                        "combinations": [
+                            {
+                                "combId": "1",
+                                "str": "H",
+                                "status": "AVAILABLE",
+                                "offerEarlySettlement": "Offer",
+                                "currentOdds": "2.20",
+                                "selections": [
+                                    {
+                                        "selId": "1",
+                                        "str": "H",
+                                        "name_ch": "\u5927",
+                                        "name_en": "High"
+                                    }
+                                ]
+                            },
+                            {
+                                "combId": "2",
+                                "str": "L",
+                                "status": "AVAILABLE",
+                                "offerEarlySettlement": "Offer",
+                                "currentOdds": "1.59",
+                                "selections": [
+                                    {
+                                        "selId": "2",
+                                        "str": "L",
+                                        "name_ch": "\u7d30",
+                                        "name_en": "Low"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "lineId": "3",
+                        "status": "SUSPENDED",
+                        "condition": "3.5",
+                        "main": false,
+                        "combinations": [
+                            {
+                                "combId": "1",
+                                "str": "H",
+                                "status": "AVAILABLE",
+                                "offerEarlySettlement": "Offer",
+                                "currentOdds": "7.00",
+                                "selections": [
+                                    {
+                                        "selId": "1",
+                                        "str": "H",
+                                        "name_ch": "\u5927",
+                                        "name_en": "High"
+                                    }
+                                ]
+                            },
+                            {
+                                "combId": "2",
+                                "str": "L",
+                                "status": "AVAILABLE",
+                                "offerEarlySettlement": "Offer",
+                                "currentOdds": "1.05",
+                                "selections": [
+                                    {
+                                        "selId": "2",
+                                        "str": "L",
+                                        "name_ch": "\u7d30",
+                                        "name_en": "Low"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "lineId": "6",
+                        "status": "SUSPENDED",
+                        "condition": "4.5",
+                        "main": false,
+                        "combinations": [
+                            {
+                                "combId": "1",
+                                "str": "H",
+                                "status": "AVAILABLE",
+                                "offerEarlySettlement": "Offer",
+                                "currentOdds": "4.75",
+                                "selections": [
+                                    {
+                                        "selId": "1",
+                                        "str": "H",
+                                        "name_ch": "\u5927",
+                                        "name_en": "High"
+                                    }
+                                ]
+                            },
+                            {
+                                "combId": "2",
+                                "str": "L",
+                                "status": "AVAILABLE",
+                                "offerEarlySettlement": "Offer",
+                                "currentOdds": "1.13",
+                                "selections": [
+                                    {
+                                        "selId": "2",
+                                        "str": "L",
+                                        "name_ch": "\u7d30",
+                                        "name_en": "Low"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "1714518005",
+                "status": "SELLINGSTARTED",
+                "oddsType": "CHL",
+                "instNo": 0,
+                "inplay": true,
+                "name_ch": "",
+                "name_en": "",
+                "updateAt": "2026-06-13T01:25:39.130+08:00",
+                "expectedSuspendDateTime": "",
+                "lines": [
+                    {
+                        "lineId": "10",
+                        "status": "AVAILABLE",
+                        "condition": "3.5",
+                        "main": true,
+                        "combinations": [
+                            {
+                                "combId": "1",
+                                "str": "H",
+                                "status": "AVAILABLE",
+                                "offerEarlySettlement": "Offer",
+                                "currentOdds": "2.20",
+                                "selections": [
+                                    {
+                                        "selId": "1",
+                                        "str": "H",
+                                        "name_ch": "\u5927",
+                                        "name_en": "High"
+                                    }
+                                ]
+                            },
+                            {
+                                "combId": "2",
+                                "str": "L",
+                                "status": "AVAILABLE",
+                                "offerEarlySettlement": "Offer",
+                                "currentOdds": "1.59",
+                                "selections": [
+                                    {
+                                        "selId": "2",
+                                        "str": "L",
+                                        "name_ch": "\u7d30",
+                                        "name_en": "Low"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "lineId": "9",
+                        "status": "AVAILABLE",
+                        "condition": "4.5",
+                        "main": false,
+                        "combinations": [
+                            {
+                                "combId": "1",
+                                "str": "H",
+                                "status": "AVAILABLE",
+                                "offerEarlySettlement": "Offer",
+                                "currentOdds": "3.55",
+                                "selections": [
+                                    {
+                                        "selId": "1",
+                                        "str": "H",
+                                        "name_ch": "\u5927",
+                                        "name_en": "High"
+                                    }
+                                ]
+                            },
+                            {
+                                "combId": "2",
+                                "str": "L",
+                                "status": "AVAILABLE",
+                                "offerEarlySettlement": "Offer",
+                                "currentOdds": "1.24",
+                                "selections": [
+                                    {
+                                        "selId": "2",
+                                        "str": "L",
+                                        "name_ch": "\u7d30",
+                                        "name_en": "Low"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "lineId": "8",
+                        "status": "AVAILABLE",
+                        "condition": "5.5",
+                        "main": false,
+                        "combinations": [
+                            {
+                                "combId": "1",
+                                "str": "H",
+                                "status": "AVAILABLE",
+                                "offerEarlySettlement": "Offer",
+                                "currentOdds": "5.90",
+                                "selections": [
+                                    {
+                                        "selId": "1",
+                                        "str": "H",
+                                        "name_ch": "\u5927",
+                                        "name_en": "High"
+                                    }
+                                ]
+                            },
+                            {
+                                "combId": "2",
+                                "str": "L",
+                                "status": "AVAILABLE",
+                                "offerEarlySettlement": "Offer",
+                                "currentOdds": "1.08",
+                                "selections": [
+                                    {
+                                        "selId": "2",
+                                        "str": "L",
+                                        "name_ch": "\u7d30",
+                                        "name_en": "Low"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "lineId": "7",
+                        "status": "SUSPENDED",
+                        "condition": "6.5",
+                        "main": false,
+                        "combinations": [
+                            {
+                                "combId": "1",
+                                "str": "H",
+                                "status": "AVAILABLE",
+                                "offerEarlySettlement": "Offer",
+                                "currentOdds": "4.95",
+                                "selections": [
+                                    {
+                                        "selId": "1",
+                                        "str": "H",
+                                        "name_ch": "\u5927",
+                                        "name_en": "High"
+                                    }
+                                ]
+                            },
+                            {
+                                "combId": "2",
+                                "str": "L",
+                                "status": "AVAILABLE",
+                                "offerEarlySettlement": "Offer",
+                                "currentOdds": "1.12",
+                                "selections": [
+                                    {
+                                        "selId": "2",
+                                        "str": "L",
+                                        "name_ch": "\u7d30",
+                                        "name_en": "Low"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "lineId": "6",
+                        "status": "SUSPENDED",
+                        "condition": "7.5",
+                        "main": false,
+                        "combinations": [
+                            {
+                                "combId": "1",
+                                "str": "H",
+                                "status": "AVAILABLE",
+                                "offerEarlySettlement": "Offer",
+                                "currentOdds": "4.60",
+                                "selections": [
+                                    {
+                                        "selId": "1",
+                                        "str": "H",
+                                        "name_ch": "\u5927",
+                                        "name_en": "High"
+                                    }
+                                ]
+                            },
+                            {
+                                "combId": "2",
+                                "str": "L",
+                                "status": "AVAILABLE",
+                                "offerEarlySettlement": "Offer",
+                                "currentOdds": "1.14",
+                                "selections": [
+                                    {
+                                        "selId": "2",
+                                        "str": "L",
+                                        "name_ch": "\u7d30",
+                                        "name_en": "Low"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "lineId": "5",
+                        "status": "SUSPENDED",
+                        "condition": "8.5",
+                        "main": false,
+                        "combinations": [
+                            {
+                                "combId": "1",
+                                "str": "H",
+                                "status": "AVAILABLE",
+                                "offerEarlySettlement": "Offer",
+                                "currentOdds": "4.30",
+                                "selections": [
+                                    {
+                                        "selId": "1",
+                                        "str": "H",
+                                        "name_ch": "\u5927",
+                                        "name_en": "High"
+                                    }
+                                ]
+                            },
+                            {
+                                "combId": "2",
+                                "str": "L",
+                                "status": "AVAILABLE",
+                                "offerEarlySettlement": "Offer",
+                                "currentOdds": "1.16",
+                                "selections": [
+                                    {
+                                        "selId": "2",
+                                        "str": "L",
+                                        "name_ch": "\u7d30",
+                                        "name_en": "Low"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "lineId": "1",
+                        "status": "SUSPENDED",
+                        "condition": "9.5",
+                        "main": false,
+                        "combinations": [
+                            {
+                                "combId": "1",
+                                "str": "H",
+                                "status": "AVAILABLE",
+                                "offerEarlySettlement": "Offer",
+                                "currentOdds": "3.80",
+                                "selections": [
+                                    {
+                                        "selId": "1",
+                                        "str": "H",
+                                        "name_ch": "\u5927",
+                                        "name_en": "High"
+                                    }
+                                ]
+                            },
+                            {
+                                "combId": "2",
+                                "str": "L",
+                                "status": "AVAILABLE",
+                                "offerEarlySettlement": "Offer",
+                                "currentOdds": "1.21",
+                                "selections": [
+                                    {
+                                        "selId": "2",
+                                        "str": "L",
+                                        "name_ch": "\u7d30",
+                                        "name_en": "Low"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "lineId": "2",
+                        "status": "SUSPENDED",
+                        "condition": "10.5",
+                        "main": false,
+                        "combinations": [
+                            {
+                                "combId": "1",
+                                "str": "H",
+                                "status": "AVAILABLE",
+                                "offerEarlySettlement": "Offer",
+                                "currentOdds": "3.45",
+                                "selections": [
+                                    {
+                                        "selId": "1",
+                                        "str": "H",
+                                        "name_ch": "\u5927",
+                                        "name_en": "High"
+                                    }
+                                ]
+                            },
+                            {
+                                "combId": "2",
+                                "str": "L",
+                                "status": "AVAILABLE",
+                                "offerEarlySettlement": "Offer",
+                                "currentOdds": "1.25",
+                                "selections": [
+                                    {
+                                        "selId": "2",
+                                        "str": "L",
+                                        "name_ch": "\u7d30",
+                                        "name_en": "Low"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "lineId": "4",
+                        "status": "SUSPENDED",
+                        "condition": "11.5",
+                        "main": false,
+                        "combinations": [
+                            {
+                                "combId": "1",
+                                "str": "H",
+                                "status": "AVAILABLE",
+                                "offerEarlySettlement": "Offer",
+                                "currentOdds": "3.45",
+                                "selections": [
+                                    {
+                                        "selId": "1",
+                                        "str": "H",
+                                        "name_ch": "\u5927",
+                                        "name_en": "High"
+                                    }
+                                ]
+                            },
+                            {
+                                "combId": "2",
+                                "str": "L",
+                                "status": "AVAILABLE",
+                                "offerEarlySettlement": "Offer",
+                                "currentOdds": "1.25",
+                                "selections": [
+                                    {
+                                        "selId": "2",
+                                        "str": "L",
+                                        "name_ch": "\u7d30",
+                                        "name_en": "Low"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "lineId": "3",
+                        "status": "SUSPENDED",
+                        "condition": "13.5",
+                        "main": false,
+                        "combinations": [
+                            {
+                                "combId": "1",
+                                "str": "H",
+                                "status": "AVAILABLE",
+                                "offerEarlySettlement": "Offer",
+                                "currentOdds": "4.40",
+                                "selections": [
+                                    {
+                                        "selId": "1",
+                                        "str": "H",
+                                        "name_ch": "\u5927",
+                                        "name_en": "High"
+                                    }
+                                ]
+                            },
+                            {
+                                "combId": "2",
+                                "str": "L",
+                                "status": "AVAILABLE",
+                                "offerEarlySettlement": "Offer",
+                                "currentOdds": "1.15",
+                                "selections": [
+                                    {
+                                        "selId": "2",
+                                        "str": "L",
+                                        "name_ch": "\u7d30",
+                                        "name_en": "Low"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "1714522009",
+                "status": "SELLINGSTARTED",
+                "oddsType": "CRS",
+                "instNo": 0,
+                "inplay": true,
+                "name_ch": "",
+                "name_en": "",
+                "updateAt": "2026-06-13T01:18:37.435+08:00",
+                "expectedSuspendDateTime": "",
+                "lines": [
+                    {
+                        "lineId": "0",
+                        "status": "AVAILABLE",
+                        "condition": "0.0",
+                        "main": true,
+                        "combinations": [
+                            {
+                                "combId": "1",
+                                "str": "01:00",
+                                "status": "AVAILABLE",
+                                "offerEarlySettlement": "Offer",
+                                "currentOdds": "2.17",
+                                "selections": [
+                                    {
+                                        "selId": "1",
+                                        "str": "1:0",
+                                        "name_ch": "1:0",
+                                        "name_en": "1:0"
+                                    }
+                                ]
+                            },
+                            {
+                                "combId": "2",
+                                "str": "02:00",
+                                "status": "AVAILABLE",
+                                "offerEarlySettlement": "Offer",
+                                "currentOdds": "4.50",
+                                "selections": [
+                                    {
+                                        "selId": "2",
+                                        "str": "2:0",
+                                        "name_ch": "2:0",
+                                        "name_en": "2:0"
+                                    }
+                                ]
+                            },
+                            {
+                                "combId": "3",
+                                "str": "02:01",
+                                "status": "AVAILABLE",
+                                "offerEarlySettlement": "Offer",
+                                "currentOdds": "7.60",
+                                "selections": [
+                                    {
+                                        "selId": "3",
+                                        "str": "2:1",
+                                        "name_ch": "2:1",
+                                        "name_en": "2:1"
+                                    }
+                                ]
+                            },
+                            {
+                                "combId": "4",
+                                "str": "03:00",
+                                "status": "AVAILABLE",
+                                "offerEarlySettlement": "Offer",
+                                "currentOdds": "21.00",
+                                "selections": [
+                                    {
+                                        "selId": "4",
+                                        "str": "3:0",
+                                        "name_ch": "3:0",
+                                        "name_en": "3:0"
+                                    }
+                                ]
+                            },
+                            {
+                                "combId": "5",
+                                "str": "03:01",
+                                "status": "AVAILABLE",
+                                "offerEarlySettlement": "Offer",
+                                "currentOdds": "35.00",
+                                "selections": [
+                                    {
+                                        "selId": "5",
+                                        "str": "3:1",
+                                        "name_ch": "3:1",
+                                        "name_en": "3:1"
+                                    }
+                                ]
+                            },
+                            {
+                                "combId": "6",
+                                "str": "03:02",
+                                "status": "AVAILABLE",
+                                "offerEarlySettlement": "Offer",
+                                "currentOdds": "125.0",
+                                "selections": [
+                                    {
+                                        "selId": "6",
+                                        "str": "3:2",
+                                        "name_ch": "3:2",
+                                        "name_en": "3:2"
+                                    }
+                                ]
+                            },
+                            {
+                                "combId": "7",
+                                "str": "04:00",
+                                "status": "AVAILABLE",
+                                "offerEarlySettlement": "Offer",
+                                "currentOdds": "150.0",
+                                "selections": [
+                                    {
+                                        "selId": "7",
+                                        "str": "4:0",
+                                        "name_ch": "4:0",
+                                        "name_en": "4:0"
+                                    }
+                                ]
+                            },
+                            {
+                                "combId": "8",
+                                "str": "04:01",
+                                "status": "AVAILABLE",
+                                "offerEarlySettlement": "Offer",
+                                "currentOdds": "250.0",
+                                "selections": [
+                                    {
+                                        "selId": "8",
+                                        "str": "4:1",
+                                        "name_ch": "4:1",
+                                        "name_en": "4:1"
+                                    }
+                                ]
+                            },
+                            {
+                                "combId": "9",
+                                "str": "04:02",
+                                "status": "AVAILABLE",
+                                "offerEarlySettlement": "Offer",
+                                "currentOdds": "1000",
+                                "selections": [
+                                    {
+                                        "selId": "9",
+                                        "str": "4:2",
+                                        "name_ch": "4:2",
+                                        "name_en": "4:2"
+                                    }
+                                ]
+                            },
+                            {
+                                "combId": "10",
+                                "str": "05:00",
+                                "status": "AVAILABLE",
+                                "offerEarlySettlement": "Offer",
+                                "currentOdds": "1000",
+                                "selections": [
+                                    {
+                                        "selId": "10",
+                                        "str": "5:0",
+                                        "name_ch": "5:0",
+                                        "name_en": "5:0"
+                                    }
+                                ]
+                            },
+                            {
+                                "combId": "11",
+                                "str": "05:01",
+                                "status": "AVAILABLE",
+                                "offerEarlySettlement": "Offer",
+                                "currentOdds": "1000",
+                                "selections": [
+                                    {
+                                        "selId": "11",
+                                        "str": "5:1",
+                                        "name_ch": "5:1",
+                                        "name_en": "5:1"
+                                    }
+                                ]
+                            },
+                            {
+                                "combId": "12",
+                                "str": "05:02",
+                                "status": "AVAILABLE",
+                                "offerEarlySettlement": "Offer",
+                                "currentOdds": "1000",
+                                "selections": [
+                                    {
+                                        "selId": "12",
+                                        "str": "5:2",
+                                        "name_ch": "5:2",
+                                        "name_en": "5:2"
+                                    }
+                                ]
+                            },
+                            {
+                                "combId": "13",
+                                "str": "HO",
+                                "status": "AVAILABLE",
+                                "offerEarlySettlement": "Offer",
+                                "currentOdds": "1000",
+                                "selections": [
+                                    {
+                                        "selId": "13",
+                                        "str": "HOAS",
+                                        "name_ch": "\u4e3b\u5176\u4ed6(\u5ba2\u6709\u5165\u7403)",
+                                        "name_en": "Home Others (Away Scores)"
+                                    }
+                                ]
+                            },
+                            {
+                                "combId": "14",
+                                "str": "00:01",
+                                "status": "IRRATIONAL",
+                                "offerEarlySettlement": "NotOffer",
+                                "currentOdds": "5.30",
+                                "selections": [
+                                    {
+                                        "selId": "14",
+                                        "str": "0:1",
+                                        "name_ch": "0:1",
+                                        "name_en": "0:1"
+                                    }
+                                ]
+                            },
+                            {
+                                "combId": "15",
+                                "str": "00:02",
+                                "status": "IRRATIONAL",
+                                "offerEarlySettlement": "NotOffer",
+                                "currentOdds": "8.25",
+                                "selections": [
+                                    {
+                                        "selId": "15",
+                                        "str": "0:2",
+                                        "name_ch": "0:2",
+                                        "name_en": "0:2"
+                                    }
+                                ]
+                            },
+                            {
+                                "combId": "16",
+                                "str": "01:02",
+                                "status": "AVAILABLE",
+                                "offerEarlySettlement": "Offer",
+                                "currentOdds": "9.00",
+                                "selections": [
+                                    {
+                                        "selId": "16",
+                                        "str": "1:2",
+                                        "name_ch": "1:2",
+                                        "name_en": "1:2"
+                                    }
+                                ]
+                            },
+                            {
+                                "combId": "17",
+                                "str": "00:03",
+                                "status": "IRRATIONAL",
+                                "offerEarlySettlement": "NotOffer",
+                                "currentOdds": "19.00",
+                                "selections": [
+                                    {
+                                        "selId": "17",
+                                        "str": "0:3",
+                                        "name_ch": "0:3",
+                                        "name_en": "0:3"
+                                    }
+                                ]
+                            },
+                            {
+                                "combId": "18",
+                                "str": "01:03",
+                                "status": "AVAILABLE",
+                                "offerEarlySettlement": "Offer",
+                                "currentOdds": "50.00",
+                                "selections": [
+                                    {
+                                        "selId": "18",
+                                        "str": "1:3",
+                                        "name_ch": "1:3",
+                                        "name_en": "1:3"
+                                    }
+                                ]
+                            },
+                            {
+                                "combId": "19",
+                                "str": "02:03",
+                                "status": "AVAILABLE",
+                                "offerEarlySettlement": "Offer",
+                                "currentOdds": "100.0",
+                                "selections": [
+                                    {
+                                        "selId": "19",
+                                        "str": "2:3",
+                                        "name_ch": "2:3",
+                                        "name_en": "2:3"
+                                    }
+                                ]
+                            },
+                            {
+                                "combId": "20",
+                                "str": "00:04",
+                                "status": "IRRATIONAL",
+                                "offerEarlySettlement": "NotOffer",
+                                "currentOdds": "60.00",
+                                "selections": [
+                                    {
+                                        "selId": "20",
+                                        "str": "0:4",
+                                        "name_ch": "0:4",
+                                        "name_en": "0:4"
+                                    }
+                                ]
+                            },
+                            {
+                                "combId": "21",
+                                "str": "01:04",
+                                "status": "AVAILABLE",
+                                "offerEarlySettlement": "Offer",
+                                "currentOdds": "400.0",
+                                "selections": [
+                                    {
+                                        "selId": "21",
+                                        "str": "1:4",
+                                        "name_ch": "1:4",
+                                        "name_en": "1:4"
+                                    }
+                                ]
+                            },
+                            {
+                                "combId": "22",
+                                "str": "02:04",
+                                "status": "AVAILABLE",
+                                "offerEarlySettlement": "Offer",
+                                "currentOdds": "900.0",
+                                "selections": [
+                                    {
+                                        "selId": "22",
+                                        "str": "2:4",
+                                        "name_ch": "2:4",
+                                        "name_en": "2:4"
+                                    }
+                                ]
+                            },
+                            {
+                                "combId": "23",
+                                "str": "00:05",
+                                "status": "IRRATIONAL",
+                                "offerEarlySettlement": "NotOffer",
+                                "currentOdds": "200.0",
+                                "selections": [
+                                    {
+                                        "selId": "23",
+                                        "str": "0:5",
+                                        "name_ch": "0:5",
+                                        "name_en": "0:5"
+                                    }
+                                ]
+                            },
+                            {
+                                "combId": "24",
+                                "str": "01:05",
+                                "status": "AVAILABLE",
+                                "offerEarlySettlement": "Offer",
+                                "currentOdds": "1000",
+                                "selections": [
+                                    {
+                                        "selId": "24",
+                                        "str": "1:5",
+                                        "name_ch": "1:5",
+                                        "name_en": "1:5"
+                                    }
+                                ]
+                            },
+                            {
+                                "combId": "25",
+                                "str": "02:05",
+                                "status": "AVAILABLE",
+                                "offerEarlySettlement": "Offer",
+                                "currentOdds": "1000",
+                                "selections": [
+                                    {
+                                        "selId": "25",
+                                        "str": "2:5",
+                                        "name_ch": "2:5",
+                                        "name_en": "2:5"
+                                    }
+                                ]
+                            },
+                            {
+                                "combId": "26",
+                                "str": "AO",
+                                "status": "AVAILABLE",
+                                "offerEarlySettlement": "Offer",
+                                "currentOdds": "1000",
+                                "selections": [
+                                    {
+                                        "selId": "26",
+                                        "str": "AOHS",
+                                        "name_ch": "\u5ba2\u5176\u4ed6(\u4e3b\u6709\u5165\u7403)",
+                                        "name_en": "Away Others (Home Scores)"
+                                    }
+                                ]
+                            },
+                            {
+                                "combId": "27",
+                                "str": "00:00",
+                                "status": "IRRATIONAL",
+                                "offerEarlySettlement": "NotOffer",
+                                "currentOdds": "7.20",
+                                "selections": [
+                                    {
+                                        "selId": "27",
+                                        "str": "0:0",
+                                        "name_ch": "0:0",
+                                        "name_en": "0:0"
+                                    }
+                                ]
+                            },
+                            {
+                                "combId": "28",
+                                "str": "01:01",
+                                "status": "AVAILABLE",
+                                "offerEarlySettlement": "Offer",
+                                "currentOdds": "3.85",
+                                "selections": [
+                                    {
+                                        "selId": "28",
+                                        "str": "1:1",
+                                        "name_ch": "1:1",
+                                        "name_en": "1:1"
+                                    }
+                                ]
+                            },
+                            {
+                                "combId": "29",
+                                "str": "02:02",
+                                "status": "AVAILABLE",
+                                "offerEarlySettlement": "Offer",
+                                "currentOdds": "23.00",
+                                "selections": [
+                                    {
+                                        "selId": "29",
+                                        "str": "2:2",
+                                        "name_ch": "2:2",
+                                        "name_en": "2:2"
+                                    }
+                                ]
+                            },
+                            {
+                                "combId": "30",
+                                "str": "03:03",
+                                "status": "AVAILABLE",
+                                "offerEarlySettlement": "Offer",
+                                "currentOdds": "600.0",
+                                "selections": [
+                                    {
+                                        "selId": "30",
+                                        "str": "3:3",
+                                        "name_ch": "3:3",
+                                        "name_en": "3:3"
+                                    }
+                                ]
+                            },
+                            {
+                                "combId": "31",
+                                "str": "DO",
+                                "status": "AVAILABLE",
+                                "offerEarlySettlement": "Offer",
+                                "currentOdds": "1000",
+                                "selections": [
+                                    {
+                                        "selId": "31",
+                                        "str": "DO",
+                                        "name_ch": "\u548c\u5176\u4ed6",
+                                        "name_en": "Draw Others"
+                                    }
+                                ]
+                            },
+                            {
+                                "combId": "32",
+                                "str": "OHN",
+                                "status": "AVAILABLE",
+                                "offerEarlySettlement": "Offer",
+                                "currentOdds": "500.0",
+                                "selections": [
+                                    {
+                                        "selId": "32",
+                                        "str": "HOAN",
+                                        "name_ch": "\u4e3b\u5176\u4ed6(\u5ba2\u7121\u5165\u7403)",
+                                        "name_en": "Home Others (Away No Goal)"
+                                    }
+                                ]
+                            },
+                            {
+                                "combId": "33",
+                                "str": "OAN",
+                                "status": "IRRATIONAL",
+                                "offerEarlySettlement": "NotOffer",
+                                "currentOdds": "900.0",
+                                "selections": [
+                                    {
+                                        "selId": "33",
+                                        "str": "AOHN",
+                                        "name_ch": "\u5ba2\u5176\u4ed6(\u4e3b\u7121\u5165\u7403)",
+                                        "name_en": "Away Others (Home No Goal)"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "1714525012",
+                "status": "SELLINGSTARTED",
+                "oddsType": "TTG",
+                "instNo": 0,
+                "inplay": true,
+                "name_ch": "",
+                "name_en": "",
+                "updateAt": "2026-06-13T01:18:37.435+08:00",
+                "expectedSuspendDateTime": "",
+                "lines": [
+                    {
+                        "lineId": "0",
+                        "status": "AVAILABLE",
+                        "condition": "0.0",
+                        "main": true,
+                        "combinations": [
+                            {
+                                "combId": "1",
+                                "str": "0",
+                                "status": "IRRATIONAL",
+                                "offerEarlySettlement": "NotOffer",
+                                "currentOdds": "7.20",
+                                "selections": [
+                                    {
+                                        "selId": "1",
+                                        "str": "0",
+                                        "name_ch": "0",
+                                        "name_en": "0"
+                                    }
+                                ]
+                            },
+                            {
+                                "combId": "2",
+                                "str": "1",
+                                "status": "AVAILABLE",
+                                "offerEarlySettlement": "Offer",
+                                "currentOdds": "2.17",
+                                "selections": [
+                                    {
+                                        "selId": "2",
+                                        "str": "1",
+                                        "name_ch": "1",
+                                        "name_en": "1"
+                                    }
+                                ]
+                            },
+                            {
+                                "combId": "3",
+                                "str": "2",
+                                "status": "AVAILABLE",
+                                "offerEarlySettlement": "Offer",
+                                "currentOdds": "2.15",
+                                "selections": [
+                                    {
+                                        "selId": "3",
+                                        "str": "2",
+                                        "name_ch": "2",
+                                        "name_en": "2"
+                                    }
+                                ]
+                            },
+                            {
+                                "combId": "4",
+                                "str": "3",
+                                "status": "AVAILABLE",
+                                "offerEarlySettlement": "Offer",
+                                "currentOdds": "4.50",
+                                "selections": [
+                                    {
+                                        "selId": "4",
+                                        "str": "3",
+                                        "name_ch": "3",
+                                        "name_en": "3"
+                                    }
+                                ]
+                            },
+                            {
+                                "combId": "5",
+                                "str": "4",
+                                "status": "AVAILABLE",
+                                "offerEarlySettlement": "Offer",
+                                "currentOdds": "14.00",
+                                "selections": [
+                                    {
+                                        "selId": "5",
+                                        "str": "4",
+                                        "name_ch": "4",
+                                        "name_en": "4"
+                                    }
+                                ]
+                            },
+                            {
+                                "combId": "6",
+                                "str": "5",
+                                "status": "AVAILABLE",
+                                "offerEarlySettlement": "Offer",
+                                "currentOdds": "60.00",
+                                "selections": [
+                                    {
+                                        "selId": "6",
+                                        "str": "5",
+                                        "name_ch": "5",
+                                        "name_en": "5"
+                                    }
+                                ]
+                            },
+                            {
+                                "combId": "7",
+                                "str": "6",
+                                "status": "AVAILABLE",
+                                "offerEarlySettlement": "Offer",
+                                "currentOdds": "350.0",
+                                "selections": [
+                                    {
+                                        "selId": "7",
+                                        "str": "6",
+                                        "name_ch": "6",
+                                        "name_en": "6"
+                                    }
+                                ]
+                            },
+                            {
+                                "combId": "8",
+                                "str": "7+",
+                                "status": "AVAILABLE",
+                                "offerEarlySettlement": "Offer",
+                                "currentOdds": "500.0",
+                                "selections": [
+                                    {
+                                        "selId": "8",
+                                        "str": "7+",
+                                        "name_ch": "7+",
+                                        "name_en": "7+"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "1732597015",
+                "status": "SELLINGSTARTED",
+                "oddsType": "NTS",
+                "instNo": 2,
+                "inplay": true,
+                "name_ch": "",
+                "name_en": "",
+                "updateAt": "2026-06-13T01:17:35.074+08:00",
+                "expectedSuspendDateTime": "",
+                "lines": [
+                    {
+                        "lineId": "0",
+                        "status": "AVAILABLE",
+                        "condition": "0.0",
+                        "main": true,
+                        "combinations": [
+                            {
+                                "combId": "1",
+                                "str": "H",
+                                "status": "AVAILABLE",
+                                "offerEarlySettlement": "Offer",
+                                "currentOdds": "3.40",
+                                "selections": [
+                                    {
+                                        "selId": "1",
+                                        "str": "H",
+                                        "name_ch": "\u4e3b\u968a",
+                                        "name_en": "Home"
+                                    }
+                                ]
+                            },
+                            {
+                                "combId": "2",
+                                "str": "A",
+                                "status": "AVAILABLE",
+                                "offerEarlySettlement": "Offer",
+                                "currentOdds": "2.49",
+                                "selections": [
+                                    {
+                                        "selId": "2",
+                                        "str": "A",
+                                        "name_ch": "\u5ba2\u968a",
+                                        "name_en": "Away"
+                                    }
+                                ]
+                            },
+                            {
+                                "combId": "3",
+                                "str": "N",
+                                "status": "AVAILABLE",
+                                "offerEarlySettlement": "Offer",
+                                "currentOdds": "2.17",
+                                "selections": [
+                                    {
+                                        "selId": "3",
+                                        "str": "N",
+                                        "name_ch": "\u7121\u5165\u7403",
+                                        "name_en": "No Goals"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "1714531048",
+                "status": "SELLINGSTARTED",
+                "oddsType": "CHD",
+                "instNo": 0,
+                "inplay": true,
+                "name_ch": "",
+                "name_en": "",
+                "updateAt": "2026-06-13T01:25:39.130+08:00",
+                "expectedSuspendDateTime": "",
+                "lines": [
+                    {
+                        "lineId": "2",
+                        "status": "AVAILABLE",
+                        "condition": "+1.5",
+                        "main": true,
+                        "combinations": [
+                            {
+                                "combId": "1",
+                                "str": "H",
+                                "status": "AVAILABLE",
+                                "offerEarlySettlement": "Offer",
+                                "currentOdds": "1.88",
+                                "selections": [
+                                    {
+                                        "selId": "1",
+                                        "str": "H",
+                                        "name_ch": "\u4e3b\u968a\u52dd",
+                                        "name_en": "Home"
+                                    }
+                                ]
+                            },
+                            {
+                                "combId": "2",
+                                "str": "A",
+                                "status": "AVAILABLE",
+                                "offerEarlySettlement": "Offer",
+                                "currentOdds": "1.82",
+                                "selections": [
+                                    {
+                                        "selId": "2",
+                                        "str": "A",
+                                        "name_ch": "\u5ba2\u968a\u52dd",
+                                        "name_en": "Away"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "lineId": "1",
+                        "status": "SUSPENDED",
+                        "condition": "+0.5",
+                        "main": false,
+                        "combinations": [
+                            {
+                                "combId": "1",
+                                "str": "H",
+                                "status": "AVAILABLE",
+                                "offerEarlySettlement": "Offer",
+                                "currentOdds": "2.55",
+                                "selections": [
+                                    {
+                                        "selId": "1",
+                                        "str": "H",
+                                        "name_ch": "\u4e3b\u968a\u52dd",
+                                        "name_en": "Home"
+                                    }
+                                ]
+                            },
+                            {
+                                "combId": "2",
+                                "str": "A",
+                                "status": "AVAILABLE",
+                                "offerEarlySettlement": "Offer",
+                                "currentOdds": "1.45",
+                                "selections": [
+                                    {
+                                        "selId": "2",
+                                        "str": "A",
+                                        "name_ch": "\u5ba2\u968a\u52dd",
+                                        "name_en": "Away"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "lineId": "3",
+                        "status": "SUSPENDED",
+                        "condition": "+2.5",
+                        "main": false,
+                        "combinations": [
+                            {
+                                "combId": "1",
+                                "str": "H",
+                                "status": "AVAILABLE",
+                                "offerEarlySettlement": "Offer",
+                                "currentOdds": "1.54",
+                                "selections": [
+                                    {
+                                        "selId": "1",
+                                        "str": "H",
+                                        "name_ch": "\u4e3b\u968a\u52dd",
+                                        "name_en": "Home"
+                                    }
+                                ]
+                            },
+                            {
+                                "combId": "2",
+                                "str": "A",
+                                "status": "AVAILABLE",
+                                "offerEarlySettlement": "Offer",
+                                "currentOdds": "2.30",
+                                "selections": [
+                                    {
+                                        "selId": "2",
+                                        "str": "A",
+                                        "name_ch": "\u5ba2\u968a\u52dd",
+                                        "name_en": "Away"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "1714534057",
+                "status": "SELLINGSTARTED",
+                "oddsType": "HLH",
+                "instNo": 0,
+                "inplay": true,
+                "name_ch": "",
+                "name_en": "",
+                "updateAt": "2026-06-13T01:18:08.530+08:00",
+                "expectedSuspendDateTime": "",
+                "lines": [
+                    {
+                        "lineId": "2",
+                        "status": "AVAILABLE",
+                        "condition": "1.5",
+                        "main": true,
+                        "combinations": [
+                            {
+                                "combId": "1",
+                                "str": "H",
+                                "status": "AVAILABLE",
+                                "offerEarlySettlement": "Offer",
+                                "currentOdds": "2.48",
+                                "selections": [
+                                    {
+                                        "selId": "1",
+                                        "str": "H",
+                                        "name_ch": "\u5927",
+                                        "name_en": "High"
+                                    }
+                                ]
+                            },
+                            {
+                                "combId": "2",
+                                "str": "L",
+                                "status": "AVAILABLE",
+                                "offerEarlySettlement": "Offer",
+                                "currentOdds": "1.47",
+                                "selections": [
+                                    {
+                                        "selId": "2",
+                                        "str": "L",
+                                        "name_ch": "\u7d30",
+                                        "name_en": "Low"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "lineId": "1",
+                        "status": "PAYOUTSTARTED",
+                        "condition": "0.5",
+                        "main": false,
+                        "combinations": [
+                            {
+                                "combId": "1",
+                                "str": "H",
+                                "status": "WIN",
+                                "offerEarlySettlement": "NotOffer",
+                                "currentOdds": "1.41",
+                                "selections": [
+                                    {
+                                        "selId": "1",
+                                        "str": "H",
+                                        "name_ch": "\u5927",
+                                        "name_en": "High"
+                                    }
+                                ]
+                            },
+                            {
+                                "combId": "2",
+                                "str": "L",
+                                "status": "LOSE",
+                                "offerEarlySettlement": "NotOffer",
+                                "currentOdds": "2.65",
+                                "selections": [
+                                    {
+                                        "selId": "2",
+                                        "str": "L",
+                                        "name_ch": "\u7d30",
+                                        "name_en": "Low"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "lineId": "3",
+                        "status": "SUSPENDED",
+                        "condition": "2.5",
+                        "main": false,
+                        "combinations": [
+                            {
+                                "combId": "1",
+                                "str": "H",
+                                "status": "AVAILABLE",
+                                "offerEarlySettlement": "Offer",
+                                "currentOdds": "10.50",
+                                "selections": [
+                                    {
+                                        "selId": "1",
+                                        "str": "H",
+                                        "name_ch": "\u5927",
+                                        "name_en": "High"
+                                    }
+                                ]
+                            },
+                            {
+                                "combId": "2",
+                                "str": "L",
+                                "status": "AVAILABLE",
+                                "offerEarlySettlement": "Offer",
+                                "currentOdds": "1.01",
+                                "selections": [
+                                    {
+                                        "selId": "2",
+                                        "str": "L",
+                                        "name_ch": "\u7d30",
+                                        "name_en": "Low"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "1714535058",
+                "status": "SELLINGSTARTED",
+                "oddsType": "HLA",
+                "instNo": 0,
+                "inplay": true,
+                "name_ch": "",
+                "name_en": "",
+                "updateAt": "2026-06-13T01:18:07.721+08:00",
+                "expectedSuspendDateTime": "",
+                "lines": [
+                    {
+                        "lineId": "3",
+                        "status": "AVAILABLE",
+                        "condition": "0.5",
+                        "main": true,
+                        "combinations": [
+                            {
+                                "combId": "1",
+                                "str": "H",
+                                "status": "AVAILABLE",
+                                "offerEarlySettlement": "Offer",
+                                "currentOdds": "1.98",
+                                "selections": [
+                                    {
+                                        "selId": "1",
+                                        "str": "H",
+                                        "name_ch": "\u5927",
+                                        "name_en": "High"
+                                    }
+                                ]
+                            },
+                            {
+                                "combId": "2",
+                                "str": "L",
+                                "status": "AVAILABLE",
+                                "offerEarlySettlement": "Offer",
+                                "currentOdds": "1.73",
+                                "selections": [
+                                    {
+                                        "selId": "2",
+                                        "str": "L",
+                                        "name_ch": "\u7d30",
+                                        "name_en": "Low"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "lineId": "1",
+                        "status": "SUSPENDED",
+                        "condition": "1.5",
+                        "main": false,
+                        "combinations": [
+                            {
+                                "combId": "1",
+                                "str": "H",
+                                "status": "AVAILABLE",
+                                "offerEarlySettlement": "Offer",
+                                "currentOdds": "6.25",
+                                "selections": [
+                                    {
+                                        "selId": "1",
+                                        "str": "H",
+                                        "name_ch": "\u5927",
+                                        "name_en": "High"
+                                    }
+                                ]
+                            },
+                            {
+                                "combId": "2",
+                                "str": "L",
+                                "status": "AVAILABLE",
+                                "offerEarlySettlement": "Offer",
+                                "currentOdds": "1.07",
+                                "selections": [
+                                    {
+                                        "selId": "2",
+                                        "str": "L",
+                                        "name_ch": "\u7d30",
+                                        "name_en": "Low"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "lineId": "2",
+                        "status": "SUSPENDED",
+                        "condition": "2.5",
+                        "main": false,
+                        "combinations": [
+                            {
+                                "combId": "1",
+                                "str": "H",
+                                "status": "AVAILABLE",
+                                "offerEarlySettlement": "Offer",
+                                "currentOdds": "6.60",
+                                "selections": [
+                                    {
+                                        "selId": "1",
+                                        "str": "H",
+                                        "name_ch": "\u5927",
+                                        "name_en": "High"
+                                    }
+                                ]
+                            },
+                            {
+                                "combId": "2",
+                                "str": "L",
+                                "status": "AVAILABLE",
+                                "offerEarlySettlement": "Offer",
+                                "currentOdds": "1.06",
+                                "selections": [
+                                    {
+                                        "selId": "2",
+                                        "str": "L",
+                                        "name_ch": "\u7d30",
+                                        "name_en": "Low"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "1714538063",
+                "status": "SELLINGSTARTED",
+                "oddsType": "CHH",
+                "instNo": 0,
+                "inplay": true,
+                "name_ch": "",
+                "name_en": "",
+                "updateAt": "2026-06-13T01:25:39.130+08:00",
+                "expectedSuspendDateTime": "",
+                "lines": [
+                    {
+                        "lineId": "6",
+                        "status": "AVAILABLE",
+                        "condition": "0.5",
+                        "main": true,
+                        "combinations": [
+                            {
+                                "combId": "1",
+                                "str": "H",
+                                "status": "AVAILABLE",
+                                "offerEarlySettlement": "Offer",
+                                "currentOdds": "1.63",
+                                "selections": [
+                                    {
+                                        "selId": "1",
+                                        "str": "H",
+                                        "name_ch": "\u5927",
+                                        "name_en": "High"
+                                    }
+                                ]
+                            },
+                            {
+                                "combId": "2",
+                                "str": "L",
+                                "status": "AVAILABLE",
+                                "offerEarlySettlement": "Offer",
+                                "currentOdds": "2.13",
+                                "selections": [
+                                    {
+                                        "selId": "2",
+                                        "str": "L",
+                                        "name_ch": "\u7d30",
+                                        "name_en": "Low"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "lineId": "5",
+                        "status": "AVAILABLE",
+                        "condition": "1.5",
+                        "main": false,
+                        "combinations": [
+                            {
+                                "combId": "1",
+                                "str": "H",
+                                "status": "AVAILABLE",
+                                "offerEarlySettlement": "Offer",
+                                "currentOdds": "3.55",
+                                "selections": [
+                                    {
+                                        "selId": "1",
+                                        "str": "H",
+                                        "name_ch": "\u5927",
+                                        "name_en": "High"
+                                    }
+                                ]
+                            },
+                            {
+                                "combId": "2",
+                                "str": "L",
+                                "status": "AVAILABLE",
+                                "offerEarlySettlement": "Offer",
+                                "currentOdds": "1.24",
+                                "selections": [
+                                    {
+                                        "selId": "2",
+                                        "str": "L",
+                                        "name_ch": "\u7d30",
+                                        "name_en": "Low"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "lineId": "4",
+                        "status": "SUSPENDED",
+                        "condition": "2.5",
+                        "main": false,
+                        "combinations": [
+                            {
+                                "combId": "1",
+                                "str": "H",
+                                "status": "AVAILABLE",
+                                "offerEarlySettlement": "Offer",
+                                "currentOdds": "5.60",
+                                "selections": [
+                                    {
+                                        "selId": "1",
+                                        "str": "H",
+                                        "name_ch": "\u5927",
+                                        "name_en": "High"
+                                    }
+                                ]
+                            },
+                            {
+                                "combId": "2",
+                                "str": "L",
+                                "status": "AVAILABLE",
+                                "offerEarlySettlement": "Offer",
+                                "currentOdds": "1.09",
+                                "selections": [
+                                    {
+                                        "selId": "2",
+                                        "str": "L",
+                                        "name_ch": "\u7d30",
+                                        "name_en": "Low"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "lineId": "3",
+                        "status": "SUSPENDED",
+                        "condition": "3.5",
+                        "main": false,
+                        "combinations": [
+                            {
+                                "combId": "1",
+                                "str": "H",
+                                "status": "AVAILABLE",
+                                "offerEarlySettlement": "Offer",
+                                "currentOdds": "4.05",
+                                "selections": [
+                                    {
+                                        "selId": "1",
+                                        "str": "H",
+                                        "name_ch": "\u5927",
+                                        "name_en": "High"
+                                    }
+                                ]
+                            },
+                            {
+                                "combId": "2",
+                                "str": "L",
+                                "status": "AVAILABLE",
+                                "offerEarlySettlement": "Offer",
+                                "currentOdds": "1.18",
+                                "selections": [
+                                    {
+                                        "selId": "2",
+                                        "str": "L",
+                                        "name_ch": "\u7d30",
+                                        "name_en": "Low"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "lineId": "1",
+                        "status": "SUSPENDED",
+                        "condition": "4.5",
+                        "main": false,
+                        "combinations": [
+                            {
+                                "combId": "1",
+                                "str": "H",
+                                "status": "AVAILABLE",
+                                "offerEarlySettlement": "Offer",
+                                "currentOdds": "3.90",
+                                "selections": [
+                                    {
+                                        "selId": "1",
+                                        "str": "H",
+                                        "name_ch": "\u5927",
+                                        "name_en": "High"
+                                    }
+                                ]
+                            },
+                            {
+                                "combId": "2",
+                                "str": "L",
+                                "status": "AVAILABLE",
+                                "offerEarlySettlement": "Offer",
+                                "currentOdds": "1.20",
+                                "selections": [
+                                    {
+                                        "selId": "2",
+                                        "str": "L",
+                                        "name_ch": "\u7d30",
+                                        "name_en": "Low"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "lineId": "2",
+                        "status": "SUSPENDED",
+                        "condition": "5.5",
+                        "main": false,
+                        "combinations": [
+                            {
+                                "combId": "1",
+                                "str": "H",
+                                "status": "AVAILABLE",
+                                "offerEarlySettlement": "Offer",
+                                "currentOdds": "2.98",
+                                "selections": [
+                                    {
+                                        "selId": "1",
+                                        "str": "H",
+                                        "name_ch": "\u5927",
+                                        "name_en": "High"
+                                    }
+                                ]
+                            },
+                            {
+                                "combId": "2",
+                                "str": "L",
+                                "status": "AVAILABLE",
+                                "offerEarlySettlement": "Offer",
+                                "currentOdds": "1.33",
+                                "selections": [
+                                    {
+                                        "selId": "2",
+                                        "str": "L",
+                                        "name_ch": "\u7d30",
+                                        "name_en": "Low"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "1714539064",
+                "status": "SELLINGSTARTED",
+                "oddsType": "CHA",
+                "instNo": 0,
+                "inplay": true,
+                "name_ch": "",
+                "name_en": "",
+                "updateAt": "2026-06-13T01:25:39.130+08:00",
+                "expectedSuspendDateTime": "",
+                "lines": [
+                    {
+                        "lineId": "5",
+                        "status": "AVAILABLE",
+                        "condition": "2.5",
+                        "main": true,
+                        "combinations": [
+                            {
+                                "combId": "1",
+                                "str": "H",
+                                "status": "AVAILABLE",
+                                "offerEarlySettlement": "Offer",
+                                "currentOdds": "2.13",
+                                "selections": [
+                                    {
+                                        "selId": "1",
+                                        "str": "H",
+                                        "name_ch": "\u5927",
+                                        "name_en": "High"
+                                    }
+                                ]
+                            },
+                            {
+                                "combId": "2",
+                                "str": "L",
+                                "status": "AVAILABLE",
+                                "offerEarlySettlement": "Offer",
+                                "currentOdds": "1.63",
+                                "selections": [
+                                    {
+                                        "selId": "2",
+                                        "str": "L",
+                                        "name_ch": "\u7d30",
+                                        "name_en": "Low"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "lineId": "4",
+                        "status": "AVAILABLE",
+                        "condition": "3.5",
+                        "main": false,
+                        "combinations": [
+                            {
+                                "combId": "1",
+                                "str": "H",
+                                "status": "AVAILABLE",
+                                "offerEarlySettlement": "Offer",
+                                "currentOdds": "3.80",
+                                "selections": [
+                                    {
+                                        "selId": "1",
+                                        "str": "H",
+                                        "name_ch": "\u5927",
+                                        "name_en": "High"
+                                    }
+                                ]
+                            },
+                            {
+                                "combId": "2",
+                                "str": "L",
+                                "status": "AVAILABLE",
+                                "offerEarlySettlement": "Offer",
+                                "currentOdds": "1.21",
+                                "selections": [
+                                    {
+                                        "selId": "2",
+                                        "str": "L",
+                                        "name_ch": "\u7d30",
+                                        "name_en": "Low"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "lineId": "3",
+                        "status": "SUSPENDED",
+                        "condition": "4.5",
+                        "main": false,
+                        "combinations": [
+                            {
+                                "combId": "1",
+                                "str": "H",
+                                "status": "AVAILABLE",
+                                "offerEarlySettlement": "Offer",
+                                "currentOdds": "4.05",
+                                "selections": [
+                                    {
+                                        "selId": "1",
+                                        "str": "H",
+                                        "name_ch": "\u5927",
+                                        "name_en": "High"
+                                    }
+                                ]
+                            },
+                            {
+                                "combId": "2",
+                                "str": "L",
+                                "status": "AVAILABLE",
+                                "offerEarlySettlement": "Offer",
+                                "currentOdds": "1.18",
+                                "selections": [
+                                    {
+                                        "selId": "2",
+                                        "str": "L",
+                                        "name_ch": "\u7d30",
+                                        "name_en": "Low"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "lineId": "1",
+                        "status": "SUSPENDED",
+                        "condition": "5.5",
+                        "main": false,
+                        "combinations": [
+                            {
+                                "combId": "1",
+                                "str": "H",
+                                "status": "AVAILABLE",
+                                "offerEarlySettlement": "Offer",
+                                "currentOdds": "3.35",
+                                "selections": [
+                                    {
+                                        "selId": "1",
+                                        "str": "H",
+                                        "name_ch": "\u5927",
+                                        "name_en": "High"
+                                    }
+                                ]
+                            },
+                            {
+                                "combId": "2",
+                                "str": "L",
+                                "status": "AVAILABLE",
+                                "offerEarlySettlement": "Offer",
+                                "currentOdds": "1.27",
+                                "selections": [
+                                    {
+                                        "selId": "2",
+                                        "str": "L",
+                                        "name_ch": "\u7d30",
+                                        "name_en": "Low"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "lineId": "2",
+                        "status": "SUSPENDED",
+                        "condition": "6.5",
+                        "main": false,
+                        "combinations": [
+                            {
+                                "combId": "1",
+                                "str": "H",
+                                "status": "AVAILABLE",
+                                "offerEarlySettlement": "Offer",
+                                "currentOdds": "3.10",
+                                "selections": [
+                                    {
+                                        "selId": "1",
+                                        "str": "H",
+                                        "name_ch": "\u5927",
+                                        "name_en": "High"
+                                    }
+                                ]
+                            },
+                            {
+                                "combId": "2",
+                                "str": "L",
+                                "status": "AVAILABLE",
+                                "offerEarlySettlement": "Offer",
+                                "currentOdds": "1.31",
+                                "selections": [
+                                    {
+                                        "selId": "2",
+                                        "str": "L",
+                                        "name_ch": "\u7d30",
+                                        "name_en": "Low"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]

@@ -1,0 +1,51 @@
+query lastOdds($matchId: String, $fbOddsTypes: [FBOddsType]!) {
+  matches: matchResult(matchId: $matchId) {
+    id
+    updateAt
+    statusUpdatedAt
+    foPools(fbOddsTypes: $fbOddsTypes, lastOdds: true) {
+      id
+      status
+      oddsType
+      instNo
+      inplay
+      name_ch
+      name_en
+      updateAt
+      lines(resultOnly: true) {
+        lineId
+        status
+        condition
+        combinations {
+          combId
+          str
+          status
+          currentOdds
+          selections {
+            selId
+            str
+            name_ch
+            name_en
+          }
+        }
+      }
+      closedLines {
+        lineId
+        status
+        condition
+        combinations {
+          combId
+          str
+          status
+          currentOdds
+          selections {
+            selId
+            str
+            name_ch
+            name_en
+          }
+        }
+      }
+    }
+  }
+}

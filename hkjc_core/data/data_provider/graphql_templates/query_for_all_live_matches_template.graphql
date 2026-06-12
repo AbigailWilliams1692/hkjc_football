@@ -1,0 +1,92 @@
+query allMatchList {
+    timeOffset {
+        fb
+        }
+        matches: matchList {
+        id
+        frontEndId
+        matchDate
+        kickOffTime
+        status
+        updateAt
+        sequence
+        esIndicatorEnabled
+        homeTeam {
+            id
+            name_en
+            name_ch
+        }
+        awayTeam {
+            id
+            name_en
+            name_ch
+        }
+        tournament {
+            id
+            frontEndId
+            nameProfileId
+            sequence
+            isInteractiveServiceAvailable
+            code
+            name_en
+            name_ch
+        }
+        isInteractiveServiceAvailable
+        inplayDelay
+        venue {
+            code
+            name_en
+            name_ch
+        }
+        tvChannels {
+            code
+            name_en
+            name_ch
+        }
+        liveEvents {
+            id
+            code
+        }
+        featureStartTime
+        featureMatchSequence
+        poolInfo {
+            normalPools
+            inplayPools
+            sellingPools
+            ntsInfo
+            entInfo
+            definedPools
+            ngsInfo {
+            str
+            name_en
+            name_ch
+            instNo
+            }
+            agsInfo {
+            str
+            name_en
+            name_ch
+            }
+        }
+        runningResult {
+            homeScore
+            awayScore
+            corner
+            homeCorner
+            awayCorner
+        }
+        runningResultExtra {
+            homeScore
+            awayScore
+            corner
+            homeCorner
+            awayCorner
+        }
+        adminOperation {
+            remark {
+            typ
+            }
+        }
+    }
+}
+  
