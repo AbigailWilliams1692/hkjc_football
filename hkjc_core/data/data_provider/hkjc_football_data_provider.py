@@ -238,11 +238,12 @@ class HKJC_Football_DataProvider(RestAPI_DataProvider):
 
         :return: Dictionary containing the team list response.
         """
-        return self._graphql_post(
+        data = self._graphql_post(
             operation_name="teamList",
             template_key="team_ids",
             variables={},
         )
+        return data.get("data", {}).get("teamList", [])
 
     ###################################################################
     # Data Methods: Live / Upcoming Match List
