@@ -13,13 +13,12 @@
 # Standard Packages
 import logging
 from abc import ABC
-from tkinter import N
 from typing import Any, Dict, List, Optional
 
 # Third-Party Packages
 
 # Local Packages
-from .hkjc_football_data_parser import HKJC_Football_DataParser
+from data_retrieval import DataModule
 
 
 #######################################################################
@@ -30,7 +29,7 @@ from .hkjc_football_data_parser import HKJC_Football_DataParser
 #######################################################################
 # Match Result Data Parser
 #######################################################################
-class MatchResult_DataParser(ABC, HKJC_Football_DataParser):
+class MatchResult_DataParser(DataModule, ABC):
     """
     Match Result Data Parser - to parse the match result data into
     a standardized format that makes sense for downstream
@@ -44,6 +43,7 @@ class MatchResult_DataParser(ABC, HKJC_Football_DataParser):
     __type: str = "DataParser"
     __score_time_period_map: Dict[str, str] = {"FT": "CRS", "HT": "FCS"}
     __first_team_to_score_map: Dict[str, str] = {"H": "Home", "A": "Away", "N": "No Goal"}
+    __results_stage_id_map: Dict[str, int] = {"HT": 3, "FT": 5, "ET": 9, "ABD": 100}
 
     #################################################
     # Constructor
@@ -94,7 +94,7 @@ class MatchResult_DataParser(ABC, HKJC_Football_DataParser):
         # Iterate through each pool
         for pool in pools:
             # Get the odd type of the pool
-            pool_odd_type = pool.get("oddType", None)
+            pool_odd_type = pool.get("oddsType", None)
             
             # Group the pools by odd type
             if pool_odd_type not in pools_by_odd_type:
@@ -102,6 +102,96 @@ class MatchResult_DataParser(ABC, HKJC_Football_DataParser):
             pools_by_odd_type[pool_odd_type].append(pool)
         
         return pools_by_odd_type
+
+    # --- results[]: Goals and Corners from matchResults query ---
+    @staticmethod
+    def _extract_result_entry(
+        results: List[Dict[str, Any]],
+        result_type: int,
+        stage_id: int,
+    ) -> Optional[Dict[str, Any]]:
+        """
+        Extract the authoritative result entry for a given resultType and stageId.
+        Replicates the JS Yh/Kh logic: filter by resultType, stageId,
+        resultConfirmType > 1, payoutConfirmed == True, then take the entry
+        with the highest sequence.
+
+        :param results: The match 'results' list from the matchResults GraphQL response
+        :param result_type: 1 = goals, 2 = corners
+        :param stage_id: 3 = HT, 5 = FT, 9 = ET, 100 = abandoned
+        :return: The matching result entry dict, or None if not found
+        """
+        candidates = [
+            r for r in results
+            if r.get("resultType") == result_type
+            and r.get("stageId") == stage_id
+            and r.get("resultConfirmType", 0) > 1
+            and r.get("payoutConfirmed", False)
+        ]
+        if not candidates:
+            return None
+        return max(candidates, key=lambda r: r.get("sequence", 0))
+
+    def extract_goals(
+        self,
+        results: List[Dict[str, Any]],
+        time_period: str,
+    ) -> Dict[str, Any]:
+        """
+        Extract goals from the match 'results' list (matchResults query).
+
+        :param results: The match 'results' list
+        :param time_period: "FT" (stageId=5), "HT" (stageId=3), or "ET" (stageId=9)
+        :return: Dict with home, away, total, display — or raises if not found
+        """
+        if time_period not in self.__results_stage_id_map:
+            raise ValueError(f"Invalid time_period '{time_period}'. Expected one of {list(self.__results_stage_id_map.keys())}.")
+        stage_id = self.__results_stage_id_map[time_period]
+        entry = self._extract_result_entry(
+            results=results, result_type=1, stage_id=stage_id
+        )
+        if entry is None:
+            raise Exception(f"No goals result found for {time_period} (stageId={stage_id}).")
+        home = entry["homeResult"]
+        away = entry["awayResult"]
+        return {
+            "home": home,
+            "away": away,
+            "total": home + away,
+            "display": f"{home}-{away}",
+        }
+
+    def extract_corners(
+        self,
+        results: List[Dict[str, Any]],
+        time_period: str,
+    ) -> Dict[str, Any]:
+        """
+        Extract corners from the match 'results' list (matchResults query).
+        If ttlCornerResult != -1, uses it as total; otherwise sums homeResult + awayResult.
+
+        :param results: The match 'results' list
+        :param time_period: "FT" (stageId=5), "HT" (stageId=3), or "ET" (stageId=9)
+        :return: Dict with home, away, total, display — or raises if not found
+        """
+        if time_period not in self.__results_stage_id_map:
+            raise ValueError(f"Invalid time_period '{time_period}'. Expected one of {list(self.__results_stage_id_map.keys())}.")
+        stage_id = self.__results_stage_id_map[time_period]
+        entry = self._extract_result_entry(
+            results=results, result_type=2, stage_id=stage_id
+        )
+        if entry is None:
+            raise Exception(f"No corners result found for {time_period} (stageId={stage_id}).")
+        home = entry["homeResult"]
+        away = entry["awayResult"]
+        ttl = entry.get("ttlCornerResult", -1)
+        total = ttl if ttl != -1 else home + away
+        return {
+            "home": home,
+            "away": away,
+            "total": total,
+            "display": f"{total}({home}:{away})" if ttl == -1 else str(total),
+        }
 
     # --- CRS / FCS: Correct score (波膽 / 半場波膽) ---
     def extract_score(self, pools_by_odd_type: Dict[str, List[Dict[str, Any]]], time_period: str) -> Dict[str, Any]:

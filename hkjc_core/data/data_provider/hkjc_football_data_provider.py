@@ -116,14 +116,14 @@ class HKJC_Football_DataProvider(RestAPI_DataProvider):
         # Register data methods so they can be invoked via fetch_data()
         self.update_data_methods(
             {
-                "team_ids":             self.get_team_ids,
-                "live_matches":         self.get_live_matches,
-                "all_live_matches":     self.get_all_live_matches,
-                "historical_matches":   self.get_historical_matches,
-                "match_result":         self.get_match_result,
-                "match_results_batch":  self.get_match_results_in_batch,
-                "match_odds":           self.get_match_odds,
-                "match_odds_batch":     self.get_match_odds_in_batch,
+                "team_ids":                     self.get_team_ids,
+                "live_matches":                 self.get_live_matches,
+                "all_live_matches":             self.get_all_live_matches,
+                "historical_matches":           self.get_historical_matches,
+                "match_result_details":         self.get_match_result_details,
+                "match_result_details_batch":   self.get_match_result_details_in_batch,
+                "match_odds":                   self.get_match_odds,
+                "match_odds_batch":             self.get_match_odds_in_batch,
             }
         )
 
@@ -177,7 +177,8 @@ class HKJC_Football_DataProvider(RestAPI_DataProvider):
             "live_matches":         self._load_graphql_template("query_for_live_matches_template.graphql"),
             "all_live_matches":     self._load_graphql_template("query_for_all_live_matches_template.graphql"),
             "historical_matches":   self._load_graphql_template("query_for_historical_matches_template.graphql"),
-            "match_result":         self._load_graphql_template("query_for_historical_match_result_template.graphql"),
+            "match_results":        self._load_graphql_template("query_for_historical_match_results_template.graphql"),
+            "match_result_details": self._load_graphql_template("query_for_historical_match_result_details_template.graphql"),
             "match_odds":           self._load_graphql_template("query_for_historical_match_odds_template.graphql"),
         }
 
@@ -339,7 +340,7 @@ class HKJC_Football_DataProvider(RestAPI_DataProvider):
         :return: List of match record dictionaries.
         """
         # Chunk the date range into ≤ 31-day windows
-        date_ranges = chunk_date_range(start_date=start_date, end_date=end_date)
+        date_ranges = chunk_date_range(start_date=start_date, end_date=end_date, maximum_interval=31)
 
         # Create container for the match records
         match_results_list: List[Dict] = []
@@ -433,24 +434,136 @@ class HKJC_Football_DataProvider(RestAPI_DataProvider):
         )
 
     ###################################################################
-    # Data Methods: Match Result by Match ID
+    # Data Methods: Match Results
     ###################################################################
-    def get_match_results_in_batch(self, match_id_list: List[str]) -> List[Dict]:
+    def get_match_results(
+        self,
+        start_date: Optional[datetime.date] = None,
+        end_date: Optional[datetime.date] = None,
+        team_id: Optional[str] = None,
+    ) -> List[Dict]:
         """
-        Retrieve match results for a batch of match IDs.
+        Retrieve historical match results. Can handle date ranges > 31 days
+        by automatically chunking the request period.
+
+        :param start_date: Start date for the search window.
+        :param end_date: End date for the search window.
+        :param team_id: Optional team ID filter.
+        :return: List of match record dictionaries.
+        """
+        # Chunk the date range into ≤ 31-day windows
+        date_ranges = chunk_date_range(start_date=start_date, end_date=end_date)
+
+        # Create container for the match records
+        match_results_list: List[Dict] = []
+        for chunk_start, chunk_end in date_ranges:
+            matches = self._get_match_results_short_period(
+                start_date=chunk_start,
+                end_date=chunk_end,
+                team_id=team_id,
+            )
+            match_results_list.extend(matches)
+
+        return match_results_list
+
+    def _get_match_results_short_period(
+        self,
+        start_date: Optional[datetime.date] = None,
+        end_date: Optional[datetime.date] = None,
+        team_id: Optional[str] = None,
+    ) -> List[Dict]:
+        """
+        Retrieve historical match results for a period of at most 31 days,
+        paginating through all available results.
+
+        :param start_date: Start date (max 31 days from end_date).
+        :param end_date: End date.
+        :param team_id: Optional team ID filter.
+        :return: List of match record dictionaries.
+        """
+        # Create container for the match records
+        match_results_list: List[Dict] = []
+
+        # Set the default start_index and end_index
+        start_index, end_index = 1, 20
+
+        # Loop through all pages
+        while True:
+            
+            # Retrieve the current page of match results
+            data = self._get_match_results_page(
+                start_index=start_index,
+                end_index=end_index,
+                start_date=start_date,
+                end_date=end_date,
+                team_id=team_id,
+            )
+
+            # Extend the match results list with the current page of match results
+            match_results_list.extend(
+                data.get("data", {}).get("matches", [])
+            )
+
+            # Check if we have fetched all match results
+            total = data.get("data", {}).get("matchNumByDate", {}).get("total", 0)
+            if total <= end_index:
+                break
+
+            # Increment the start and end indices for the next page
+            start_index += 20
+            end_index += 20
+
+        return match_results_list
+    
+    def _get_match_results_page(
+        self,
+        start_index: int,
+        end_index: int,
+        start_date: Optional[datetime.date] = None,
+        end_date: Optional[datetime.date] = None,
+        team_id: Optional[str] = None,
+    ) -> Dict:
+        """
+        Retrieve a single page of historical match results.
+
+        :param start_index: Pagination start index.
+        :param end_index: Pagination end index.
+        :param start_date: Start date filter.
+        :param end_date: End date filter.
+        :param team_id: Optional team ID filter.
+        :return: Raw JSON response dictionary.
+        """
+        variables = {
+            "startDate": start_date.strftime("%Y-%m-%d") if start_date else None,
+            "endDate": end_date.strftime("%Y-%m-%d") if end_date else None,
+            "startIndex": start_index,
+            "endIndex": end_index,
+            "teamId": team_id,
+        }
+        return self._graphql_post(
+            template_key="match_results", 
+            variables=variables
+        )
+
+    ###################################################################
+    # Data Methods: Match Result Details by Match ID
+    ###################################################################
+    def get_match_result_details_in_batch(self, match_id_list: List[str]) -> List[Dict]:
+        """
+        Retrieve match result details for a batch of match IDs.
 
         :param match_id_list: List of match IDs.
         :return: List of match result dictionaries.
         """
         match_results_list: List[Dict] = []
         for match_id in match_id_list:
-            match_result = self.get_match_result(match_id=match_id)
+            match_result = self.get_match_result_details(match_id=match_id)
             match_results_list.append(match_result)
         return match_results_list
 
-    def get_match_result(self, match_id: str) -> Dict:
+    def get_match_result_details(self, match_id: str) -> Dict:
         """
-        Retrieve detailed match results for a single match.
+        Retrieve match result details for a single match.
 
         :param match_id: The match ID.
         :return: Match result dictionary.
