@@ -1,10 +1,10 @@
 #######################################################################
 # Project: HKJC Football
-# File: match_result_data_parser.py
-# Description: Parse match result data.
+# File: match_result_details_data_parser.py
+# Description: Parse match result details data.
 # Author: AbigailWilliams
 # Created: 2025-06-18
-# Updated: 2026-06-18
+# Updated: 2026-06-28
 #######################################################################
 
 #######################################################################
@@ -29,7 +29,7 @@ from data_retrieval import DataModule
 #######################################################################
 # Match Result Data Parser
 #######################################################################
-class MatchResult_DataParser(DataModule, ABC):
+class MatchResultDetails_DataParser(DataModule, ABC):
     """
     Match Result Data Parser - to parse the match result data into
     a standardized format that makes sense for downstream
@@ -63,136 +63,8 @@ class MatchResult_DataParser(DataModule, ABC):
         )
     
     #################################################
-    # Implement the abstract parse method
+    # Parse Match Result Details
     #################################################
-    def parse(self, data: Any) -> Dict[str, Any]:
-        """
-        Parse the data into a standardized format.
-        
-        Args:
-            data: The data to parse
-            
-        Returns:
-            Dict[str, Any]: The parsed data
-        """
-        pass
-    
-    #################################################
-    # Utility methods
-    #################################################
-    @staticmethod
-    def extract_pool_by_odd_type(pools: List[Dict[str, Any]]) -> Dict[str, List[Dict[str, Any]]]:
-        """
-        Extract the pools and group them by odd type.
-        
-        :param pools: The list of pools to extract from
-        :return: Dict[str, List[Dict[str, Any]]]: The extracted pools grouped by odd type
-        """
-        # Initialize a dictionary to store the pools grouped by odd type
-        pools_by_odd_type = {}
-
-        # Iterate through each pool
-        for pool in pools:
-            # Get the odd type of the pool
-            pool_odd_type = pool.get("oddsType", None)
-            
-            # Group the pools by odd type
-            if pool_odd_type not in pools_by_odd_type:
-                pools_by_odd_type[pool_odd_type] = []
-            pools_by_odd_type[pool_odd_type].append(pool)
-        
-        return pools_by_odd_type
-
-    # --- results[]: Goals and Corners from matchResults query ---
-    @staticmethod
-    def _extract_result_entry(
-        results: List[Dict[str, Any]],
-        result_type: int,
-        stage_id: int,
-    ) -> Optional[Dict[str, Any]]:
-        """
-        Extract the authoritative result entry for a given resultType and stageId.
-        Replicates the JS Yh/Kh logic: filter by resultType, stageId,
-        resultConfirmType > 1, payoutConfirmed == True, then take the entry
-        with the highest sequence.
-
-        :param results: The match 'results' list from the matchResults GraphQL response
-        :param result_type: 1 = goals, 2 = corners
-        :param stage_id: 3 = HT, 5 = FT, 9 = ET, 100 = abandoned
-        :return: The matching result entry dict, or None if not found
-        """
-        candidates = [
-            r for r in results
-            if r.get("resultType") == result_type
-            and r.get("stageId") == stage_id
-            and r.get("resultConfirmType", 0) > 1
-            and r.get("payoutConfirmed", False)
-        ]
-        if not candidates:
-            return None
-        return max(candidates, key=lambda r: r.get("sequence", 0))
-
-    def extract_goals(
-        self,
-        results: List[Dict[str, Any]],
-        time_period: str,
-    ) -> Dict[str, Any]:
-        """
-        Extract goals from the match 'results' list (matchResults query).
-
-        :param results: The match 'results' list
-        :param time_period: "FT" (stageId=5), "HT" (stageId=3), or "ET" (stageId=9)
-        :return: Dict with home, away, total, display — or raises if not found
-        """
-        if time_period not in self.__results_stage_id_map:
-            raise ValueError(f"Invalid time_period '{time_period}'. Expected one of {list(self.__results_stage_id_map.keys())}.")
-        stage_id = self.__results_stage_id_map[time_period]
-        entry = self._extract_result_entry(
-            results=results, result_type=1, stage_id=stage_id
-        )
-        if entry is None:
-            raise Exception(f"No goals result found for {time_period} (stageId={stage_id}).")
-        home = entry["homeResult"]
-        away = entry["awayResult"]
-        return {
-            "home": home,
-            "away": away,
-            "total": home + away,
-            "display": f"{home}-{away}",
-        }
-
-    def extract_corners(
-        self,
-        results: List[Dict[str, Any]],
-        time_period: str,
-    ) -> Dict[str, Any]:
-        """
-        Extract corners from the match 'results' list (matchResults query).
-        If ttlCornerResult != -1, uses it as total; otherwise sums homeResult + awayResult.
-
-        :param results: The match 'results' list
-        :param time_period: "FT" (stageId=5), "HT" (stageId=3), or "ET" (stageId=9)
-        :return: Dict with home, away, total, display — or raises if not found
-        """
-        if time_period not in self.__results_stage_id_map:
-            raise ValueError(f"Invalid time_period '{time_period}'. Expected one of {list(self.__results_stage_id_map.keys())}.")
-        stage_id = self.__results_stage_id_map[time_period]
-        entry = self._extract_result_entry(
-            results=results, result_type=2, stage_id=stage_id
-        )
-        if entry is None:
-            raise Exception(f"No corners result found for {time_period} (stageId={stage_id}).")
-        home = entry["homeResult"]
-        away = entry["awayResult"]
-        ttl = entry.get("ttlCornerResult", -1)
-        total = ttl if ttl != -1 else home + away
-        return {
-            "home": home,
-            "away": away,
-            "total": total,
-            "display": f"{total}({home}:{away})" if ttl == -1 else str(total),
-        }
-
     # --- CRS / FCS: Correct score (波膽 / 半場波膽) ---
     def extract_score(self, pools_by_odd_type: Dict[str, List[Dict[str, Any]]], time_period: str) -> Dict[str, Any]:
         """
